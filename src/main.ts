@@ -1,9 +1,5 @@
-import * as express from 'express';
+import { Server } from './server';
 
 console.log('hi i am typescript!');
-
-const app = express();
-const port = 8080;
-app.listen(port, () => {
-  console.log(`App listening on the port ${port}`);
-});
+const server = new Server(8080);
+server.start();
